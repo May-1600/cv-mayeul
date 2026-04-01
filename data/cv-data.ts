@@ -53,6 +53,16 @@ export const projects: Project[] = [
     url: "https://restaurantdugolf-legreen.vercel.app",
   },
   {
+    title: "R\u00e9seau social interne d\u2019\u00e9quipe",
+    company: "Grand groupe t\u00e9l\u00e9com",
+    description:
+      "Plateforme sociale interne pour connecter les collaborateurs : profils, comp\u00e9tences, recommandations, carte collaborative des restaurants avec g\u00e9olocalisation.",
+    tags: ["JavaScript", "Leaflet.js", "OpenStreetMap", "CSS Grid"],
+    metric: "D\u00e9ploy\u00e9 en interne",
+    gradient: "from-red-500/20 to-orange-500/20",
+    icon: "globe",
+  },
+  {
     title: "Life Dashboard",
     company: "Side project",
     description:
