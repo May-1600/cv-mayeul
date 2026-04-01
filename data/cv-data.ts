@@ -6,7 +6,7 @@ export const personalInfo = {
     "Je con\u00e7ois et d\u00e9ploie des outils IA concrets : dashboards, automatisations, int\u00e9grations API. Du prototype au produit utilis\u00e9 par des milliers de personnes.",
   email: "mayeuldecharentenay@gmail.com",
   phone: "06 37 35 88 86",
-  linkedin: "https://www.linkedin.com/in/mayeul-mareschal-de-charentenay/",
+  linkedin: "https://www.linkedin.com/in/mayeul-de-charentenay/",
   photo: "/photo-mayeul.jpg",
 };
 
