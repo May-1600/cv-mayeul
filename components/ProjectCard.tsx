@@ -1,12 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Bot,
-  BarChart3,
-  Globe,
-  Workflow,
-} from "lucide-react";
+import { Bot, BarChart3, Globe, Workflow } from "lucide-react";
 import type { Project } from "@/data/cv-data";
 
 const iconMap: Record<string, typeof Bot> = {
@@ -30,9 +25,9 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="card-glow group rounded-2xl bg-[#141414] p-6 transition-all duration-300 hover:bg-[#1a1a1a]"
+      className="glass glass-hover group rounded-2xl p-6"
     >
-      {/* Icon + gradient background */}
+      {/* Icon with gradient background */}
       <div
         className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${project.gradient}`}
       >
@@ -45,10 +40,10 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       </h3>
 
       {/* Company */}
-      <p className="text-sm text-neutral-500 mb-3">{project.company}</p>
+      <p className="text-sm text-white/30 mb-3">{project.company}</p>
 
       {/* Description */}
-      <p className="text-sm leading-relaxed text-neutral-400 mb-4">
+      <p className="text-sm leading-relaxed text-white/50 mb-4">
         {project.description}
       </p>
 
@@ -64,7 +59,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         {project.tags.map((tag) => (
           <span
             key={tag}
-            className="rounded-full bg-white/5 px-3 py-1 text-xs text-neutral-400 transition-colors group-hover:bg-white/10"
+            className="rounded-full bg-white/5 px-3 py-1 text-xs text-white/40 transition-colors group-hover:bg-white/10 group-hover:text-white/60"
           >
             {tag}
           </span>

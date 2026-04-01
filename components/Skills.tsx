@@ -14,10 +14,10 @@ const iconMap: Record<string, typeof Brain> = {
 
 export default function Skills() {
   return (
-    <section id="competences" className="px-6 py-24 sm:py-32">
+    <section id="competences" className="relative z-10 px-6 py-24 sm:py-32">
       <div className="mx-auto max-w-5xl">
         <AnimatedSection>
-          <p className="text-sm font-medium uppercase tracking-widest text-blue-400 mb-3">
+          <p className="text-sm font-medium uppercase tracking-widest text-pink-400 mb-3">
             Stack
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold mb-12">
@@ -30,10 +30,10 @@ export default function Skills() {
             const Icon = iconMap[category.icon] || Brain;
             return (
               <AnimatedSection key={category.name} delay={catIdx * 0.1}>
-                <div className="rounded-2xl bg-[#141414] p-6 h-full">
+                <div className="glass glass-hover rounded-2xl p-6 h-full">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5">
-                      <Icon size={18} className="text-blue-400" />
+                      <Icon size={18} className="text-cyan-400" />
                     </div>
                     <h3 className="text-base font-semibold">{category.name}</h3>
                   </div>
@@ -48,7 +48,7 @@ export default function Skills() {
                           duration: 0.3,
                           delay: catIdx * 0.1 + skillIdx * 0.05,
                         }}
-                        className="rounded-full bg-white/5 px-3 py-1.5 text-sm text-neutral-300 transition-colors hover:bg-white/10 hover:text-white"
+                        className="rounded-full bg-white/5 px-3 py-1.5 text-sm text-white/50 transition-colors hover:bg-white/10 hover:text-white/80"
                       >
                         {skill}
                       </motion.span>
