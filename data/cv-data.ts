@@ -1,9 +1,9 @@
 export const personalInfo = {
   name: "Mayeul de Charentenay",
-  tagline: "Je vibe-code des outils IA qui tournent en prod",
+  tagline: "Vibe codeur \u00b7 Veilleur IA obsessionnel",
   subtitle: "Data PO IA chez Orange \u00b7 ESSEC BBA Global",
   pitch:
-    "3 000 commerciaux utilisent un outil que j\u2019ai con\u00e7u chez Orange. La nuit, je construis des syst\u00e8mes IA pour PME. Dashboards, automatisations, int\u00e9grations API \u2014 livr\u00e9s en jours, pas en mois.",
+    "Je vibe-code des dashboards, des CRM et des automatisations depuis des mois. En alternance chez Orange, j\u2019ai vu de l\u2019int\u00e9rieur comment les grands groupes fonctionnent : projets \u00e0 6 mois, DSI rigides, budgets x3. Je sais leur parler \u2014 et je sais livrer en 10 fois moins de temps.",
   email: "mayeul.mareschaldecharentenay@essec.edu",
   linkedin: "https://www.linkedin.com/in/mayeul-de-charentenay/",
   photo: "/photo-mayeul.jpg",
