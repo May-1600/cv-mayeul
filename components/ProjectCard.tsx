@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bot, BarChart3, Globe, Workflow } from "lucide-react";
-import { ExternalLink } from "lucide-react";
+import { Bot, BarChart3, Globe, Workflow, ExternalLink } from "lucide-react";
 import type { Project } from "@/data/cv-data";
 
 const iconMap: Record<string, typeof Bot> = {
@@ -15,14 +14,11 @@ const iconMap: Record<string, typeof Bot> = {
 interface ProjectCardProps {
   project: Project;
   index: number;
+  onClick: () => void;
 }
 
-export default function ProjectCard({ project, index }: ProjectCardProps) {
+export default function ProjectCard({ project, index, onClick }: ProjectCardProps) {
   const Icon = iconMap[project.icon] || Bot;
-  const Wrapper = project.url ? "a" : "div";
-  const linkProps = project.url
-    ? { href: project.url, target: "_blank" as const, rel: "noopener noreferrer" }
-    : {};
 
   return (
     <motion.div
@@ -31,52 +27,53 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-    <Wrapper
-      {...linkProps}
-      className={`glass glass-hover group rounded-2xl p-6 block h-full ${project.url ? "cursor-pointer" : ""}`}
-    >
-      {/* Icon with gradient background */}
-      <div
-        className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${project.gradient}`}
+      <button
+        onClick={onClick}
+        className="glass glass-hover group rounded-2xl p-6 block h-full w-full text-left cursor-pointer"
       >
-        <Icon size={22} className="text-white" />
-      </div>
+        {/* Icon with gradient background */}
+        <div
+          className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${project.gradient}`}
+        >
+          <Icon size={22} className="text-white" />
+        </div>
 
-      {/* Title */}
-      <h3 className="text-lg font-semibold text-white mb-1">
-        {project.title}
-      </h3>
+        {/* Title */}
+        <h3 className="text-lg font-semibold text-white mb-1">
+          {project.title}
+        </h3>
 
-      {/* Company */}
-      <p className="text-sm text-white/30 mb-3">{project.company}</p>
+        {/* Company */}
+        <p className="text-sm text-white/30 mb-3">{project.company}</p>
 
-      {/* Description */}
-      <p className="text-sm leading-relaxed text-white/50 mb-4">
-        {project.description}
-      </p>
-
-      {/* Metric */}
-      {project.metric && (
-        <p className="text-sm font-medium gradient-text mb-4">
-          {project.metric}
+        {/* Description */}
+        <p className="text-sm leading-relaxed text-white/50 mb-4">
+          {project.description}
         </p>
-      )}
 
-      {/* Tags + link indicator */}
-      <div className="flex flex-wrap items-center gap-2">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-full bg-white/5 px-3 py-1 text-xs text-white/40 transition-colors group-hover:bg-white/10 group-hover:text-white/60"
-          >
-            {tag}
-          </span>
-        ))}
-        {project.url && (
-          <ExternalLink size={14} className="ml-auto text-white/20 group-hover:text-cyan-400 transition-colors" />
+        {/* Metric */}
+        {project.metric && (
+          <p className="text-sm font-medium gradient-text mb-4">
+            {project.metric}
+          </p>
         )}
-      </div>
-    </Wrapper>
+
+        {/* Tags + expand hint */}
+        <div className="flex flex-wrap items-center gap-2">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full bg-white/5 px-3 py-1 text-xs text-white/40 transition-colors group-hover:bg-white/10 group-hover:text-white/60"
+            >
+              {tag}
+            </span>
+          ))}
+          <span className="ml-auto text-xs text-white/20 group-hover:text-cyan-400 transition-colors flex items-center gap-1">
+            D&eacute;tails
+            <ExternalLink size={12} />
+          </span>
+        </div>
+      </button>
     </motion.div>
   );
 }

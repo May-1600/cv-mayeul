@@ -13,11 +13,13 @@ export interface Project {
   title: string;
   company: string;
   description: string;
+  longDescription: string;
   tags: string[];
   metric?: string;
   gradient: string;
   icon: string;
   url?: string;
+  images?: string[];
 }
 
 export const projects: Project[] = [
@@ -25,53 +27,68 @@ export const projects: Project[] = [
     title: "Outil IA de pr\u00e9paration RDV commerciaux",
     company: "Grand groupe t\u00e9l\u00e9com",
     description:
-      "Outil IA g\u00e9n\u00e9rant des fiches de pr\u00e9paration RDV personnalis\u00e9es pour la force de vente. Mails contextualis\u00e9s, r\u00e9sum\u00e9 d\u2019activit\u00e9 client, veille sectorielle automatique. Aliment\u00e9 par CRM, API d\u2019enrichissement et LLM.",
+      "Outil IA g\u00e9n\u00e9rant des fiches de pr\u00e9paration RDV personnalis\u00e9es pour la force de vente.",
+    longDescription:
+      "Outil IA d\u00e9ploy\u00e9 aupr\u00e8s de 3 000+ commerciaux terrain. G\u00e9n\u00e8re des fiches de pr\u00e9paration RDV personnalis\u00e9es avec : mails contextualis\u00e9s par secteur d\u2019activit\u00e9, r\u00e9sum\u00e9 de l\u2019activit\u00e9 client (CRM), veille sectorielle automatique, et contexte r\u00e9seaux sociaux. Aliment\u00e9 par des donn\u00e9es CRM Salesforce, des API d\u2019enrichissement (Pappers), et un LLM interne + GPT-4.1 pour la g\u00e9n\u00e9ration. Pipeline orchestr\u00e9 sur Dataiku avec logs BigQuery.",
     tags: ["Dataiku", "LLM", "API REST", "Python", "BigQuery"],
     metric: "3 000+ commerciaux \u00e9quip\u00e9s",
     gradient: "from-blue-500/20 to-cyan-500/20",
     icon: "bot",
+    images: ["/projects/frpv-placeholder.svg"],
   },
   {
     title: "Syst\u00e8me IA local pour PME",
     company: "Side project",
     description:
-      "Infrastructure IA cl\u00e9 en main d\u00e9ployable sur Mac Mini. Modules : RAG documentaire, chatbot, OCR de factures, CRM, automatisation SMS. Orchestration N8N + LLM local + base vectorielle.",
+      "Infrastructure IA cl\u00e9 en main d\u00e9ployable sur Mac Mini avec 6 modules m\u00e9tier.",
+    longDescription:
+      "Syst\u00e8me IA complet d\u00e9ployable sur Mac Mini ou mini-PC chez un client PME. Architecture Docker Compose : N8N (orchestration de workflows), Ollama (LLM local Mistral/Qwen), Qdrant (base vectorielle), PostgreSQL. Frontend Next.js avec interface chat RAG, pilotage des automatisations, et dashboard KPIs. 6 modules : RAG documentaire, chatbot site web, OCR factures, CRM/RDV, automatisation SMS, SEO/GEO. Tout tourne en local \u2014 pas de d\u00e9pendance cloud.",
     tags: ["N8N", "Ollama", "Qdrant", "Docker", "Next.js", "PostgreSQL"],
     metric: "6 modules m\u00e9tier op\u00e9rationnels",
     gradient: "from-emerald-500/20 to-teal-500/20",
     icon: "workflow",
+    images: ["/projects/box-placeholder.svg"],
   },
   {
     title: "Site web Restaurant du Golf",
     company: "Projet client",
     description:
-      "Site complet pour un restaurant gastronomique : r\u00e9servation, carte interactive, administration. Design responsive, authentification et base de donn\u00e9es cloud.",
+      "Site complet pour un restaurant gastronomique : r\u00e9servation, carte, administration.",
+    longDescription:
+      "Site web complet pour Le Green, restaurant gastronomique au golf de Vichy. Fonctionnalit\u00e9s : r\u00e9servation en ligne, carte interactive du menu, interface d\u2019administration pour le restaurateur, authentification Supabase, design responsive. Stack moderne React + TypeScript + Tailwind, d\u00e9ploy\u00e9 sur Vercel avec CI/CD automatique.",
     tags: ["React", "TypeScript", "Tailwind", "Supabase", "Vite"],
     metric: "En production",
     gradient: "from-orange-500/20 to-amber-500/20",
     icon: "globe",
     url: "https://restaurantdugolf-legreen.vercel.app",
+    images: ["/projects/restaurant-placeholder.svg"],
   },
   {
     title: "R\u00e9seau social interne d\u2019\u00e9quipe",
     company: "Grand groupe t\u00e9l\u00e9com",
     description:
-      "Plateforme sociale interne pour connecter les collaborateurs : profils, comp\u00e9tences, recommandations, carte collaborative des restaurants avec g\u00e9olocalisation.",
+      "Plateforme pour connecter les collaborateurs : profils, comp\u00e9tences, carte collaborative.",
+    longDescription:
+      "Hub digital interne pour une \u00e9quipe IA. Permet aux collaborateurs de partager leur profil (r\u00f4le, comp\u00e9tences, bio), de rechercher des experts par comp\u00e9tence, et de contribuer \u00e0 une carte collaborative des restaurants \u00e0 proximit\u00e9 avec g\u00e9olocalisation Leaflet.js + OpenStreetMap. Construit en JavaScript vanilla pour une int\u00e9gration l\u00e9g\u00e8re sans d\u00e9pendances lourdes.",
     tags: ["JavaScript", "Leaflet.js", "OpenStreetMap", "CSS Grid"],
     metric: "D\u00e9ploy\u00e9 en interne",
     gradient: "from-red-500/20 to-orange-500/20",
     icon: "globe",
+    images: ["/projects/entrenoo-placeholder.svg"],
   },
   {
     title: "Boutique de beats en ligne",
     company: "Projet client",
     description:
-      "E-commerce Shopify pour un producteur musical. Catalogue de beats, pr\u00e9\u00e9coute int\u00e9gr\u00e9e, paiement en ligne, design custom sur th\u00e8me Liquid.",
+      "E-commerce Shopify pour un producteur musical. Catalogue, pr\u00e9\u00e9coute, paiement.",
+    longDescription:
+      "Boutique e-commerce Shopify pour Trave, producteur musical. Catalogue de beats avec pr\u00e9\u00e9coute int\u00e9gr\u00e9e, paiement en ligne (Stripe via Shopify), design custom sur th\u00e8me Liquid, pages produit optimis\u00e9es. Le client g\u00e8re son catalogue en autonomie depuis le back-office Shopify.",
     tags: ["Shopify", "Liquid", "E-commerce", "Design"],
     metric: "En production",
     gradient: "from-yellow-500/20 to-orange-500/20",
     icon: "globe",
     url: "https://travebeats.com",
+    images: ["/projects/travebeats-placeholder.svg"],
   },
 ];
 
