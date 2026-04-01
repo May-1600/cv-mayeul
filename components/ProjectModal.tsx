@@ -47,7 +47,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             </button>
 
             {/* Image area */}
-            <div className="relative w-full h-56 sm:h-72 overflow-hidden rounded-t-2xl">
+            <div className="relative w-full h-64 sm:h-96 overflow-hidden rounded-t-2xl">
               {isPlaceholder ? (
                 <div className={`w-full h-full bg-gradient-to-br ${project.gradient} flex items-center justify-center`}>
                   <div className="text-center text-white/40">
@@ -63,10 +63,10 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                     src={images[imgIdx] || images[0]}
                     alt={project.title}
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-center"
                   />
-                  {/* Dark overlay for readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#050510] via-transparent to-transparent" />
+                  {/* Subtle bottom fade only */}
+                  <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-[#050510]/80 to-transparent" />
 
                   {/* Navigation arrows */}
                   {images.length > 1 && (
