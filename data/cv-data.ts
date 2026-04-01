@@ -108,7 +108,7 @@ export const skillCategories: SkillCategory[] = [
     icon: "brain",
     skills: [
       "Claude",
-      "GPT-4",
+      "Ollama",
       "Prompt Engineering",
       "RAG",
       "Agents IA",
