@@ -62,6 +62,17 @@ export const projects: Project[] = [
     gradient: "from-purple-500/20 to-pink-500/20",
     icon: "chart",
   },
+  {
+    title: "Boutique de beats en ligne",
+    company: "Projet client",
+    description:
+      "E-commerce Shopify pour un producteur musical. Catalogue de beats, pr\u00e9\u00e9coute int\u00e9gr\u00e9e, paiement en ligne, design custom sur th\u00e8me Liquid.",
+    tags: ["Shopify", "Liquid", "E-commerce", "Design"],
+    metric: "En production",
+    gradient: "from-yellow-500/20 to-orange-500/20",
+    icon: "globe",
+    url: "https://travebeats.com",
+  },
 ];
 
 export interface Experience {
