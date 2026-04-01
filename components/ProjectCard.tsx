@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Bot, BarChart3, Globe, Workflow } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import type { Project } from "@/data/cv-data";
 
 const iconMap: Record<string, typeof Bot> = {
@@ -18,6 +19,10 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   const Icon = iconMap[project.icon] || Bot;
+  const Wrapper = project.url ? "a" : "div";
+  const linkProps = project.url
+    ? { href: project.url, target: "_blank" as const, rel: "noopener noreferrer" }
+    : {};
 
   return (
     <motion.div
@@ -25,7 +30,10 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="glass glass-hover group rounded-2xl p-6"
+    >
+    <Wrapper
+      {...linkProps}
+      className={`glass glass-hover group rounded-2xl p-6 block h-full ${project.url ? "cursor-pointer" : ""}`}
     >
       {/* Icon with gradient background */}
       <div
@@ -54,8 +62,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         </p>
       )}
 
-      {/* Tags */}
-      <div className="flex flex-wrap gap-2">
+      {/* Tags + link indicator */}
+      <div className="flex flex-wrap items-center gap-2">
         {project.tags.map((tag) => (
           <span
             key={tag}
@@ -64,7 +72,11 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             {tag}
           </span>
         ))}
+        {project.url && (
+          <ExternalLink size={14} className="ml-auto text-white/20 group-hover:text-cyan-400 transition-colors" />
+        )}
       </div>
+    </Wrapper>
     </motion.div>
   );
 }

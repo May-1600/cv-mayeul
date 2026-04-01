@@ -1,11 +1,10 @@
 export const personalInfo = {
   name: "Mayeul de Charentenay",
-  tagline: "Data Product Owner IA chez Orange",
-  subtitle: "ESSEC BBA Global",
+  tagline: "Je vibe-code des outils IA qui tournent en prod",
+  subtitle: "Data PO IA chez Orange \u00b7 ESSEC BBA Global",
   pitch:
-    "Je con\u00e7ois et d\u00e9ploie des outils IA concrets : dashboards, automatisations, int\u00e9grations API. Du prototype au produit utilis\u00e9 par des milliers de personnes.",
+    "3 000 commerciaux utilisent un outil que j\u2019ai con\u00e7u chez Orange. La nuit, je construis des syst\u00e8mes IA pour PME. Dashboards, automatisations, int\u00e9grations API \u2014 livr\u00e9s en jours, pas en mois.",
   email: "mayeuldecharentenay@gmail.com",
-  phone: "06 37 35 88 86",
   linkedin: "https://www.linkedin.com/in/mayeul-de-charentenay/",
   photo: "/photo-mayeul.jpg",
 };
@@ -18,6 +17,7 @@ export interface Project {
   metric?: string;
   gradient: string;
   icon: string;
+  url?: string;
 }
 
 export const projects: Project[] = [
@@ -47,9 +47,10 @@ export const projects: Project[] = [
     description:
       "Site complet pour un restaurant gastronomique : r\u00e9servation, carte interactive, administration. Design responsive, authentification et base de donn\u00e9es cloud.",
     tags: ["React", "TypeScript", "Tailwind", "Supabase", "Vite"],
-    metric: "En production \u2014 utilis\u00e9 par le restaurant",
+    metric: "En production",
     gradient: "from-orange-500/20 to-amber-500/20",
     icon: "globe",
+    url: "https://restaurantdugolf-legreen.vercel.app",
   },
   {
     title: "Life Dashboard",
@@ -81,18 +82,11 @@ export const experiences: Experience[] = [
     highlight: "Poste actuel",
   },
   {
-    role: "Assistant Gestion Priv\u00e9e",
-    company: "DNCA Finance",
-    period: "D\u00e9c 2024 \u2014 Mar 2025",
-    description:
-      "Analyse financi\u00e8re et gestion de portefeuilles. KYC, conformit\u00e9 r\u00e9glementaire, relation client institutionnel.",
-  },
-  {
     role: "BBA Global",
     company: "ESSEC Business School",
     period: "2022 \u2014 2026",
     description:
-      "Programme Grande \u00c9cole avec sp\u00e9cialisation finance et entrepreneuriat. Responsable communication du BDE.",
+      "Programme Grande \u00c9cole. Sp\u00e9cialisation finance et entrepreneuriat. Responsable communication du BDE.",
   },
 ];
 
@@ -104,7 +98,7 @@ export interface SkillCategory {
 
 export const skillCategories: SkillCategory[] = [
   {
-    name: "IA & LLM",
+    name: "IA & Automatisation",
     icon: "brain",
     skills: [
       "Claude",
@@ -118,7 +112,7 @@ export const skillCategories: SkillCategory[] = [
   {
     name: "Data",
     icon: "database",
-    skills: ["Dataiku", "BigQuery", "Python", "SQL", "API REST", "Qdrant"],
+    skills: ["Dataiku", "BigQuery", "Python", "SQL", "Qdrant", "Supabase"],
   },
   {
     name: "D\u00e9veloppement",
@@ -131,7 +125,7 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       "Product Management",
       "Salesforce",
-      "Supabase",
+      "Prospection",
       "Gestion de projet",
     ],
   },

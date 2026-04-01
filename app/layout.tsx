@@ -13,10 +13,11 @@ export const metadata: Metadata = {
   description:
     "Data Product Owner IA chez Orange, ESSEC BBA Global. Outils IA, dashboards, automatisations.",
   openGraph: {
-    title: "Mayeul de Charentenay — Data Product Owner IA",
+    title: "Mayeul de Charentenay — Builder IA",
     description:
-      "Data Product Owner IA chez Orange, ESSEC BBA Global. Outils IA, dashboards, automatisations.",
+      "Je vibe-code des outils IA qui tournent en prod. Data PO IA chez Orange, ESSEC BBA Global.",
     type: "website",
+    images: [{ url: "/photo-mayeul.jpg", width: 400, height: 400 }],
   },
 };
 
