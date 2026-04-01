@@ -119,14 +119,14 @@ export const experiences: Experience[] = [
 
 export interface SkillCategory {
   name: string;
-  icon: string;
+  emoji: string;
   skills: string[];
 }
 
 export const skillCategories: SkillCategory[] = [
   {
     name: "IA & Automatisation",
-    icon: "brain",
+    emoji: "\u{1F9E0}",
     skills: [
       "Claude",
       "Ollama",
@@ -138,17 +138,17 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: "Data",
-    icon: "database",
+    emoji: "\u{1F4CA}",
     skills: ["Dataiku", "BigQuery", "Python", "SQL", "Qdrant", "Supabase"],
   },
   {
     name: "D\u00e9veloppement",
-    icon: "code",
+    emoji: "\u{1F4BB}",
     skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Flutter", "Docker"],
   },
   {
     name: "Business",
-    icon: "briefcase",
+    emoji: "\u{1F4BC}",
     skills: [
       "Product Management",
       "Salesforce",
