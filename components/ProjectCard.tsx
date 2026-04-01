@@ -1,15 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Bot, BarChart3, Globe, Workflow, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import type { Project } from "@/data/cv-data";
-
-const iconMap: Record<string, typeof Bot> = {
-  bot: Bot,
-  chart: BarChart3,
-  globe: Globe,
-  workflow: Workflow,
-};
 
 interface ProjectCardProps {
   project: Project;
@@ -18,8 +11,6 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, index, onClick }: ProjectCardProps) {
-  const Icon = iconMap[project.icon] || Bot;
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -31,11 +22,11 @@ export default function ProjectCard({ project, index, onClick }: ProjectCardProp
         onClick={onClick}
         className="glass glass-hover group rounded-2xl p-6 block h-full w-full text-left cursor-pointer"
       >
-        {/* Icon with gradient background */}
+        {/* Emoji icon */}
         <div
-          className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${project.gradient}`}
+          className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${project.gradient} text-2xl`}
         >
-          <Icon size={22} className="text-white" />
+          {project.emoji}
         </div>
 
         {/* Title */}

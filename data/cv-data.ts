@@ -17,7 +17,7 @@ export interface Project {
   tags: string[];
   metric?: string;
   gradient: string;
-  icon: string;
+  emoji: string;
   url?: string;
   demo?: string;
 }
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     tags: ["Dataiku", "LLM", "API REST", "Python", "BigQuery"],
     metric: "3 000+ commerciaux \u00e9quip\u00e9s",
     gradient: "from-blue-500/20 to-cyan-500/20",
-    icon: "bot",
+    emoji: "\u{1F916}",
   },
   {
     title: "Syst\u00e8me IA local pour PME",
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     tags: ["N8N", "Ollama", "Qdrant", "Docker", "Next.js", "PostgreSQL"],
     metric: "6 modules m\u00e9tier op\u00e9rationnels",
     gradient: "from-emerald-500/20 to-teal-500/20",
-    icon: "workflow",
+    emoji: "\u{2699}\uFE0F",
     demo: "/projects/box-demo.gif",
   },
   {
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     tags: ["React", "TypeScript", "Tailwind", "Supabase", "Vite"],
     metric: "En production",
     gradient: "from-orange-500/20 to-amber-500/20",
-    icon: "globe",
+    emoji: "\u{1F37D}\uFE0F",
     url: "https://restaurantdugolf-legreen.vercel.app",
     demo: "/projects/restaurant-demo.gif",
   },
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     tags: ["JavaScript", "Leaflet.js", "OpenStreetMap", "CSS Grid"],
     metric: "D\u00e9ploy\u00e9 en interne",
     gradient: "from-red-500/20 to-orange-500/20",
-    icon: "globe",
+    emoji: "\u{1F465}",
     demo: "/projects/entrenoo-demo.gif",
   },
   {
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     tags: ["Shopify", "Liquid", "E-commerce", "Design"],
     metric: "En production",
     gradient: "from-yellow-500/20 to-orange-500/20",
-    icon: "globe",
+    emoji: "\u{1F3B5}",
     url: "https://travebeats.com",
     demo: "/projects/beats-demo.gif",
   },

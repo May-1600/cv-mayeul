@@ -1,15 +1,8 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ExternalLink, Bot, BarChart3, Globe, Workflow } from "lucide-react";
+import { X, ExternalLink } from "lucide-react";
 import type { Project } from "@/data/cv-data";
-
-const iconMap: Record<string, typeof Bot> = {
-  bot: Bot,
-  chart: BarChart3,
-  globe: Globe,
-  workflow: Workflow,
-};
 
 interface ProjectModalProps {
   project: Project | null;
@@ -18,7 +11,6 @@ interface ProjectModalProps {
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   if (!project) return null;
-  const Icon = iconMap[project.icon] || Bot;
 
   return (
     <AnimatePresence>
@@ -44,7 +36,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             {/* Close button */}
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white/60 hover:bg-white/20 hover:text-white transition-colors"
+              className="absolute top-4 right-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 backdrop-blur-sm text-white/60 hover:bg-black/60 hover:text-white transition-colors"
             >
               <X size={16} />
             </button>
@@ -58,7 +50,6 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   alt={`D\u00e9mo ${project.title}`}
                   className="w-full h-auto max-h-96 object-contain bg-black/40"
                 />
-                {/* Overlay with title */}
                 <div className="absolute bottom-0 left-0 right-0 px-6 py-4 bg-gradient-to-t from-[#050510] to-transparent">
                   <p className="text-xs text-white/40 mb-0.5">{project.company}</p>
                   <h3 className="text-lg font-bold text-white">{project.title}</h3>
@@ -67,8 +58,8 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             ) : (
               <div className={`relative w-full px-8 pt-12 pb-8 bg-gradient-to-br ${project.gradient} border-b border-white/5`}>
                 <div className="flex items-start gap-5">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 flex-shrink-0">
-                    <Icon size={28} className="text-white" />
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 flex-shrink-0 text-3xl">
+                    {project.emoji}
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm text-white/40 mb-1">{project.company}</p>
