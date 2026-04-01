@@ -4,7 +4,7 @@ export const personalInfo = {
   subtitle: "Data PO IA chez Orange \u00b7 ESSEC BBA Global",
   pitch:
     "3 000 commerciaux utilisent un outil que j\u2019ai con\u00e7u chez Orange. La nuit, je construis des syst\u00e8mes IA pour PME. Dashboards, automatisations, int\u00e9grations API \u2014 livr\u00e9s en jours, pas en mois.",
-  email: "mayeuldecharentenay@gmail.com",
+  email: "mayeul.mareschaldecharentenay@essec.edu",
   linkedin: "https://www.linkedin.com/in/mayeul-de-charentenay/",
   photo: "/photo-mayeul.jpg",
 };
