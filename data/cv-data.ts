@@ -63,16 +63,6 @@ export const projects: Project[] = [
     icon: "globe",
   },
   {
-    title: "Life Dashboard",
-    company: "Side project",
-    description:
-      "Application mobile centralisant emails (Gmail/Outlook), agent IA, et commandes vocales. Chiffrement AES-256, OAuth2, speech-to-text et synth\u00e8se vocale int\u00e9gr\u00e9s.",
-    tags: ["Flutter", "Dart", "Supabase", "Google APIs", "IA vocale"],
-    metric: "App cross-platform iOS/Android",
-    gradient: "from-purple-500/20 to-pink-500/20",
-    icon: "chart",
-  },
-  {
     title: "Boutique de beats en ligne",
     company: "Projet client",
     description:
