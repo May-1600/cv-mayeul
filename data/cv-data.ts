@@ -73,6 +73,7 @@ export const projects: Project[] = [
     metric: "D\u00e9ploy\u00e9 en interne",
     gradient: "from-red-500/20 to-orange-500/20",
     icon: "globe",
+    demo: "/projects/entrenoo-screen.jpg",
   },
   {
     title: "Boutique de beats en ligne",
