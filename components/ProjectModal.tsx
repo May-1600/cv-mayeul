@@ -49,28 +49,51 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               <X size={16} />
             </button>
 
-            {/* Hero banner with gradient + icon + metric */}
-            <div className={`relative w-full px-8 pt-12 pb-8 bg-gradient-to-br ${project.gradient} border-b border-white/5`}>
-              <div className="flex items-start gap-5">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 flex-shrink-0">
-                  <Icon size={28} className="text-white" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm text-white/40 mb-1">{project.company}</p>
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    {project.title}
-                  </h3>
-                  {project.metric && (
-                    <span className="inline-block rounded-full bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-1.5 text-sm font-medium text-white">
-                      {project.metric}
-                    </span>
-                  )}
+            {/* Demo GIF or gradient banner */}
+            {project.demo ? (
+              <div className="relative w-full border-b border-white/5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={project.demo}
+                  alt={`D\u00e9mo ${project.title}`}
+                  className="w-full h-auto max-h-96 object-contain bg-black/40"
+                />
+                {/* Overlay with title */}
+                <div className="absolute bottom-0 left-0 right-0 px-6 py-4 bg-gradient-to-t from-[#050510] to-transparent">
+                  <p className="text-xs text-white/40 mb-0.5">{project.company}</p>
+                  <h3 className="text-lg font-bold text-white">{project.title}</h3>
                 </div>
               </div>
-            </div>
+            ) : (
+              <div className={`relative w-full px-8 pt-12 pb-8 bg-gradient-to-br ${project.gradient} border-b border-white/5`}>
+                <div className="flex items-start gap-5">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 flex-shrink-0">
+                    <Icon size={28} className="text-white" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm text-white/40 mb-1">{project.company}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      {project.title}
+                    </h3>
+                    {project.metric && (
+                      <span className="inline-block rounded-full bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-1.5 text-sm font-medium text-white">
+                        {project.metric}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Content */}
             <div className="p-6 sm:p-8">
+              {/* Metric (shown here when demo GIF is present) */}
+              {project.demo && project.metric && (
+                <p className="text-sm font-medium gradient-text mb-4">
+                  {project.metric}
+                </p>
+              )}
+
               {/* Long description */}
               <p className="text-sm leading-relaxed text-white/50 mb-6">
                 {project.longDescription}

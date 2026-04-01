@@ -19,7 +19,7 @@ export interface Project {
   gradient: string;
   icon: string;
   url?: string;
-
+  demo?: string;
 }
 
 export const projects: Project[] = [
@@ -46,6 +46,7 @@ export const projects: Project[] = [
     metric: "6 modules m\u00e9tier op\u00e9rationnels",
     gradient: "from-emerald-500/20 to-teal-500/20",
     icon: "workflow",
+    demo: "/projects/box-demo.gif",
   },
   {
     title: "Site web Restaurant du Golf",
@@ -59,6 +60,7 @@ export const projects: Project[] = [
     gradient: "from-orange-500/20 to-amber-500/20",
     icon: "globe",
     url: "https://restaurantdugolf-legreen.vercel.app",
+    demo: "/projects/restaurant-demo.gif",
   },
   {
     title: "R\u00e9seau social interne d\u2019\u00e9quipe",
@@ -84,6 +86,7 @@ export const projects: Project[] = [
     gradient: "from-yellow-500/20 to-orange-500/20",
     icon: "globe",
     url: "https://travebeats.com",
+    demo: "/projects/beats-demo.gif",
   },
 ];
 
