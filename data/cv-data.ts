@@ -47,7 +47,7 @@ export const projects: Project[] = [
     metric: "6 modules m\u00e9tier op\u00e9rationnels",
     gradient: "from-emerald-500/20 to-teal-500/20",
     icon: "workflow",
-    images: ["/projects/box-placeholder.svg"],
+    images: ["/projects/box-1.png", "/projects/box-2.png"],
   },
   {
     title: "Site web Restaurant du Golf",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     gradient: "from-orange-500/20 to-amber-500/20",
     icon: "globe",
     url: "https://restaurantdugolf-legreen.vercel.app",
-    images: ["/projects/restaurant-placeholder.svg"],
+    images: ["/projects/restaurant-1.png"],
   },
   {
     title: "R\u00e9seau social interne d\u2019\u00e9quipe",
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     metric: "D\u00e9ploy\u00e9 en interne",
     gradient: "from-red-500/20 to-orange-500/20",
     icon: "globe",
-    images: ["/projects/entrenoo-placeholder.svg"],
+    images: ["/projects/entrenoo-1.png"],
   },
   {
     title: "Boutique de beats en ligne",
@@ -88,7 +88,7 @@ export const projects: Project[] = [
     gradient: "from-yellow-500/20 to-orange-500/20",
     icon: "globe",
     url: "https://travebeats.com",
-    images: ["/projects/travebeats-placeholder.svg"],
+    images: ["/projects/travebeats-1.png"],
   },
 ];
 
