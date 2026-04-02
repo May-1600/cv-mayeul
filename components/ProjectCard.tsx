@@ -22,15 +22,9 @@ export default function ProjectCard({ project, index, onClick }: ProjectCardProp
         onClick={onClick}
         className="glass glass-hover group rounded-2xl p-6 block h-full w-full text-left cursor-pointer"
       >
-        {/* Emoji icon */}
-        <div
-          className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${project.gradient} text-2xl`}
-        >
-          {project.emoji}
-        </div>
-
-        {/* Title */}
+        {/* Title with emoji inline */}
         <h3 className="text-lg font-semibold text-white mb-1">
+          <span className="mr-2">{project.emoji}</span>
           {project.title}
         </h3>
 
