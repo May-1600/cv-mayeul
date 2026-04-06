@@ -19,7 +19,7 @@ export default function Projects() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Ce que je construis
           </h2>
-          <p className="text-white/40 mb-12 max-w-lg">
+          <p className="text-white/50 mb-12 max-w-lg">
             Des outils concrets, livr&eacute;s vite, qui r&egrave;glent de vrais probl&egrave;mes.
             Cliquez pour en savoir plus.
           </p>

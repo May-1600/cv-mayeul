@@ -51,7 +51,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   className="w-full h-auto max-h-96 object-contain bg-black/40"
                 />
                 <div className="absolute bottom-0 left-0 right-0 px-6 py-4 bg-gradient-to-t from-[#050510] to-transparent">
-                  <p className="text-xs text-white/40 mb-0.5">{project.company}</p>
+                  <p className="text-xs text-white/50 mb-0.5">{project.company}</p>
                   <h3 className="text-lg font-bold text-white">{project.title}</h3>
                 </div>
               </div>
@@ -62,7 +62,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                     {project.emoji}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm text-white/40 mb-1">{project.company}</p>
+                    <p className="text-sm text-white/50 mb-1">{project.company}</p>
                     <h3 className="text-2xl font-bold text-white mb-2">
                       {project.title}
                     </h3>

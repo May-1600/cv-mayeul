@@ -29,7 +29,7 @@ export default function ProjectCard({ project, index, onClick }: ProjectCardProp
         </h3>
 
         {/* Company */}
-        <p className="text-sm text-white/30 mb-3">{project.company}</p>
+        <p className="text-sm text-white/50 mb-3">{project.company}</p>
 
         {/* Description */}
         <p className="text-sm leading-relaxed text-white/50 mb-4">
@@ -48,12 +48,12 @@ export default function ProjectCard({ project, index, onClick }: ProjectCardProp
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full bg-white/5 px-3 py-1 text-xs text-white/40 transition-colors group-hover:bg-white/10 group-hover:text-white/60"
+              className="rounded-full bg-white/5 px-3 py-1 text-xs text-white/50 transition-colors group-hover:bg-white/10 group-hover:text-white/70"
             >
               {tag}
             </span>
           ))}
-          <span className="ml-auto text-xs text-white/20 group-hover:text-cyan-400 transition-colors flex items-center gap-1">
+          <span className="ml-auto text-xs text-white/40 group-hover:text-cyan-400 transition-colors flex items-center gap-1">
             D&eacute;tails
             <ExternalLink size={12} />
           </span>

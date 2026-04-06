@@ -64,12 +64,12 @@ export default function Timeline() {
                       </span>
                     )}
                   </div>
-                  <p className="text-sm font-medium text-white/40 mb-1">
+                  <p className="text-sm font-medium text-white/50 mb-1">
                     {exp.company}
-                    <span className="mx-2 text-white/20">&middot;</span>
+                    <span className="mx-2 text-white/30">&middot;</span>
                     {exp.period}
                   </p>
-                  <p className="text-sm leading-relaxed text-white/35">
+                  <p className="text-sm leading-relaxed text-white/50">
                     {exp.description}
                   </p>
                 </div>
@@ -79,7 +79,7 @@ export default function Timeline() {
 
           {/* Side projects hint */}
           <AnimatedSection delay={0.4} className="mt-10 ml-0 sm:ml-12">
-            <p className="text-sm text-white/20 italic">
+            <p className="text-sm text-white/40 italic">
               + side projects IA en cours &mdash; automatisations, RAG,
               prospection data-driven
             </p>

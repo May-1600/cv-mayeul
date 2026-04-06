@@ -15,7 +15,7 @@ export default function Contact() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Parlons-en
           </h2>
-          <p className="text-white/40 mb-10 max-w-md mx-auto">
+          <p className="text-white/50 mb-10 max-w-md mx-auto">
             Un projet, une mission, une question ? Je r&eacute;ponds en 24h.
           </p>
         </AnimatedSection>
@@ -43,7 +43,7 @@ export default function Contact() {
 
         <AnimatedSection delay={0.4}>
           <div className="mt-16 pt-8 border-t border-white/5">
-            <p className="text-xs text-white/20">
+            <p className="text-xs text-white/40">
               Vibe-cod&eacute; avec Claude &middot; Next.js &middot; Tailwind &middot; Framer Motion &middot; Vercel
             </p>
           </div>
