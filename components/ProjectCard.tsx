@@ -24,7 +24,7 @@ export default function ProjectCard({ project, index, onClick }: ProjectCardProp
       >
         {/* Title with emoji inline */}
         <h3 className="text-lg font-semibold text-white mb-1">
-          <span className="mr-2">{project.emoji}</span>
+          <span className="mr-2 emoji-mono">{project.emoji}</span>
           {project.title}
         </h3>
 

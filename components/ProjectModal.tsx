@@ -58,7 +58,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             ) : (
               <div className={`relative w-full px-8 pt-12 pb-8 bg-gradient-to-br ${project.gradient} border-b border-white/5`}>
                 <div className="flex items-start gap-5">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 flex-shrink-0 text-3xl">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm border border-white/10 flex-shrink-0 text-3xl emoji-mono">
                     {project.emoji}
                   </div>
                   <div className="flex-1 min-w-0">

@@ -22,7 +22,7 @@ export default function Skills() {
             <AnimatedSection key={category.name} delay={catIdx * 0.1}>
               <div className="glass glass-hover rounded-2xl p-6 h-full">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-2xl">{category.emoji}</span>
+                  <span className="text-2xl emoji-mono">{category.emoji}</span>
                   <h3 className="text-base font-semibold">{category.name}</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
