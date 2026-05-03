@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# cv-mayeul
 
-## Getting Started
+> Interactive CV — built with Next.js 16 + React 19 + Tailwind 4.
 
-First, run the development server:
+A single-page interactive resume for **Mayeul de Charentenay** — Data PO IA at Orange · ESSEC BBA Global.
+
+## What's inside
+
+- **`/`** — single page, animated reveals via Framer Motion 12, dark theme with WCAG AA contrast
+- **`data/cv-data.ts`** — single source of truth: personal info, projects, experiences, skill categories. All content lives here, components consume it.
+- **Static export** — fully prerendered (no server runtime needed); deploys anywhere static.
+
+## Stack
+
+| Layer | Choice | Why |
+|-------|--------|-----|
+| Framework | Next.js 16 (App Router) | Latest stable, RSC default, edge-ready |
+| UI | React 19 | Concurrent features, automatic batching |
+| Styling | Tailwind CSS 4 | Zero-config, design tokens via `@theme` |
+| Animation | Framer Motion 12 | Declarative reveals + scroll-triggered transitions |
+| Icons | Lucide React | Tree-shakeable SVG icons |
+
+## Quick start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # static export → .next/
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Customize
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To make this your own CV, edit `data/cv-data.ts`:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `personalInfo` — name, tagline, email, LinkedIn, photo
+- `projects` — array of project cards (title, company, description, tags, metrics)
+- `experiences` — work history with dates and bullet points
+- `skillCategories` — skill groups for the skills section
 
-## Learn More
+Replace `public/photo-mayeul.jpg` with your own photo (1:1 ratio, ~400×400 minimum).
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Optimized for Vercel:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm install -g vercel
+vercel
+```
 
-## Deploy on Vercel
+Or any static host that serves the `.next/` directory after `npm run build`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Code: MIT — see [LICENSE](./LICENSE). Content (CV text, photo, biographical data): all rights reserved — please don't reuse my biographical content as a template; fork the structure and replace the data.
